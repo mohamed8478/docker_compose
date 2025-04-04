@@ -5,9 +5,12 @@ require('dotenv').config();
 const app = express();
 const port = 3000;
 
-// Connect to PostgreSQL
+
+
+
+
 const client = new Client({
-  host: 'db',  // Use 'db' because that's the service name of PostgreSQL in docker-compose.yml
+  host: 'db',  
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
